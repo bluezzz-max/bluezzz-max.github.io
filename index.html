@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Princess Nourhan ❤️</title>
+
+<!-- الخطوط الفاخرة -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,700;1,400&family=Cairo:wght@700;900&family=Caveat:wght@700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+    user-select: none;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* خلفية داكنة فخمة جداً مع تدرج وردي ناعم */
+    background: radial-gradient(circle at center, #1f0812 0%, #0d0206 100%);
+    position: relative;
+}
+
+/* هالة نيون متوهجة في خلفية الكرت */
+body::before {
+    content: '';
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    background: linear-gradient(135deg, #ff2a5f, #ff758c);
+    filter: blur(140px);
+    border-radius: 50%;
+    opacity: 0.52;
+    animation: pulseGlow 6s infinite alternate ease-in-out;
+}
+
+@keyframes pulseGlow {
+    0% { transform: scale(0.9); opacity: 0.4; }
+    100% { transform: scale(1.15); opacity: 0.65; }
+}
+
+/* ذيل حركة الماوس السحري */
+.trail {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #ff4d6d;
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: 0 0 12px #ff4d6d, 0 0 20px #ff758c;
+    animation: fadeTrail 0.8s forwards ease-out;
+    z-index: 9999;
+}
+
+@keyframes fadeTrail {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(0); opacity: 0; }
+}
+
+/* فقاعات حب زجاجية متصاعدة */
+.bubble {
+    position: absolute;
+    bottom: -70px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 12px 26px;
+    border-radius: 35px;
+    font-family: 'Amiri', serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+    white-space: nowrap;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(255, 255, 255, 0.1);
+    animation: floatUp 11s infinite linear;
+    z-index: 1;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0) scale(0.8) rotate(-3deg); opacity: 0; }
+    15% { opacity: 0.9; }
+    85% { opacity: 0.9; }
+    100% { transform: translateY(-115vh) scale(1.1) rotate(4deg); opacity: 0; }
+}
+
+/* الكرت الزجاجي الشياكة */
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 50px 35px;
+    border-radius: 40px;
+    width: 95%;
+    max-width: 550px;
+    text-align: center;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7), 
+                inset 0 0 30px rgba(255, 255, 255, 0.08);
+    z-index: 2;
+    position: relative;
+    animation: cardAppear 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes cardAppear {
+    0% { transform: translateY(40px) scale(0.92); opacity: 0; }
+    100% { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+h1 {
+    font-family: 'Caveat', cursive;
+    color: #ffffff;
+    font-size: 4.3rem;
+    margin: 0 0 15px 0;
+    text-shadow: 0 0 25px rgba(255, 77, 109, 0.8);
+    line-height: 1.1;
+}
+
+h2 {
+    color: #f8f9fa;
+    font-size: 1.9rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+p {
+    color: #e9ecef;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    font-weight: 700;
+}
+
+.funnyText {
+    min-height: 55px;
+    font-family: 'Amiri', serif;
+    color: #ffb3c1;
+    font-weight: bold;
+    font-size: 26px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 18px rgba(255, 77, 109, 0.9);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-top: 15px;
+    min-height: 120px;
+    position: relative;
+}
+
+/* تصميم الأزرار وانيميشن التفاعل */
+button {
+    border: none;
+    padding: 18px 40px;
+    border-radius: 30px;
+    font-size: 24px;
+    font-weight: 900;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease, background 0.3s;
+}
+
+/* تأثير الضغط للداخل */
+button:active {
+    transform: scale(0.92) !important;
+}
+
+/* أزار نعم والحب */
+.btn-yes {
+    background: linear-gradient(135deg, #ff4d6d, #c9184a);
+    color: white;
+    box-shadow: 0 10px 30px rgba(255, 77, 109, 0.5), inset 0 0 12px rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    z-index: 10;
+    transform-origin: center center;
+    animation: btnPulse 2.5s infinite alternate ease-in-out;
+}
+
+@keyframes btnPulse {
+    0% { box-shadow: 0 10px 30px rgba(255, 77, 109, 0.5); }
+    100% { box-shadow: 0 15px 45px rgba(255, 77, 109, 0.9); }
+}
+
+.btn-yes:hover {
+    transform: translateY(-4px) scale(1.03);
+}
+
+/* زرار تؤ و No */
+.btn-no {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 5;
+}
+
+.btn-no:hover {
+    background: rgba(255, 255, 255, 0.18);
+}
+
+#no {
+    z-index: 999;
+}
+
+/* موجة الضغط الضوئية Ripple */
+.ripple {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    transform: scale(0);
+    animation: rippleEffect 0.6s linear;
+    pointer-events: none;
+}
+
+@keyframes rippleEffect {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+#question, #dateBox, #final {
+    display: none;
+}
+
+input {
+    width: 90%;
+    padding: 18px;
+    margin: 14px 0;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    font-size: 22px;
+    outline: none;
+    text-align: center;
+    font-weight: bold;
+    transition: border 0.3s ease;
+}
+
+input:focus {
+    border-color: #ff4d6d;
+    box-shadow: 0 0 15px rgba(255, 77, 109, 0.4);
+}
+
+input::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    transform: scale(1.3);
+    cursor: pointer;
+}
+
+.confirm {
+    background: linear-gradient(135deg, #ff4d6d, #c9184a);
+    color: white;
+    width: 90%;
+    margin-top: 25px;
+    font-size: 24px;
+    padding: 18px;
+    box-shadow: 0 12px 35px rgba(255, 77, 109, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.music {
+    margin-top: 30px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    color: white;
+    font-size: 20px;
+    padding: 16px 32px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 40px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.music:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+</style>
+</head>
+
+<body>
+
+<!-- فقاعات الحب -->
+<div class="bubble" style="left: 5%; animation-delay: 0s;">بحبك يا أميرتي ❤️</div>
+<div class="bubble" style="left: 25%; animation-delay: 2.5s;">بحبك يا هبلة 🤪❤️</div>
+<div class="bubble" style="left: 45%; animation-delay: 5s;">ضحكتك الدنيا كلها 🥰</div>
+<div class="bubble" style="left: 65%; animation-delay: 1.5s;">وجودك هو فرحتي 💖</div>
+<div class="bubble" style="left: 82%; animation-delay: 4s;">Princess Nourhan 👑</div>
+<div class="bubble" style="left: 15%; animation-delay: 7s;">روحي وحبيبتي 🌸</div>
+<div class="bubble" style="left: 55%; animation-delay: 8.5s;">Khaloudi ❤️ Nourhan</div>
+
+<audio id="song" loop>
+    <source src="going-home.mp3" type="audio/mpeg">
+</audio>
+
+<div class="card">
+
+    <!-- المرحلة 0: سؤال تحبيني؟ -->
+    <div id="loveQuestion">
+        <h1>Hey Princess Nourhan 👑❤️</h1>
+        <h2>بتحبيني؟ 🥺👉👈</h2>
+        <div class="funnyText" id="loveText"></div>
+        
+        <div class="btn-container" id="loveBtnContainer">
+            <button id="loveYes" class="btn-yes">أكيد طبعاً ❤️</button>
+            <button id="loveNo" class="btn-no">تؤ 🙈</button>
+        </div>
+    </div>
+
+    <!-- المرحلة 1: السؤال الرئيسي والخروج -->
+    <div id="question">
+        <h1>Princess Nourhan 👑❤️</h1>
+        <p>Khaloudi Dodi has a very important question...</p>
+        <h2>Do you want to hang out with me? 😍</h2>
+
+        <div class="funnyText" id="funnyText"></div>
+
+        <div class="btn-container">
+            <button id="yes" class="btn-yes">Yes ❤️</button>
+            <button id="no" class="btn-no">No 🙈</button>
+        </div>
+
+        <button class="music" onclick="toggleMusic()">🎵 <span id="musicText">اضغط عليا قبل متختار</span></button>
+    </div>
+
+    <!-- المرحلة 2: اختيار الميعاد -->
+    <div id="dateBox">
+        <h1>Yaaay ❤️</h1>
+        <p>Choose our date 🥰</p>
+
+        <input type="date" id="date">
+        <input type="time" id="time">
+
+        <button class="confirm" onclick="done()">Confirm Date ❤️</button>
+    </div>
+
+    <!-- المرحلة 3: التأكيد النهائي -->
+    <div id="final">
+        <h1>Perfect ❤️</h1>
+        <p>
+            See you soon, Princess Nourhan 👑<br><br>
+            Khaloudi Dodi can't wait 🥰
+        </p>
+    </div>
+
+</div>
+
+<script>
+// --- 1. تأثير ذيل الماوس السحري ---
+window.addEventListener('mousemove', function(e) {
+    const trail = document.createElement('div');
+    trail.className = 'trail';
+    trail.style.left = e.clientX - 5 + 'px';
+    trail.style.top = e.clientY - 5 + 'px';
+    document.body.appendChild(trail);
+
+    setTimeout(() => {
+        trail.remove();
+    }, 800);
+});
+
+// --- 2. أنيميشن موجة الضغط (Ripple Effect) للأزرار ---
+document.querySelectorAll('button').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+        const x = e.clientX - e.target.getBoundingClientRect().left;
+        const y = e.clientY - e.target.getBoundingClientRect().top;
+
+        const ripple = document.createElement('span');
+        ripple.className = 'ripple';
+        ripple.style.left = `${x}px`;
+        ripple.style.top = `${y}px`;
+
+        this.appendChild(ripple);
+
+        setTimeout(() => {
+            ripple.remove();
+        }, 600);
+    });
+});
+
+// --- 3. دالة عدم تكرار الرسائل ---
+function createUniquePicker(array) {
+    let pool = [...array];
+    return function() {
+        if (pool.length === 0) {
+            pool = [...array];
+        }
+        const index = Math.floor(Math.random() * pool.length);
+        const item = pool[index];
+        pool.splice(index, 1);
+        return item;
+    };
+}
+
+// --- 4. مرحلة بتحبيني؟ ---
+let loveYesScale = 1;
+let loveNoScale = 1;
+
+const loveYesBtn = document.getElementById("loveYes");
+const loveNoBtn = document.getElementById("loveNo");
+const loveText = document.getElementById("loveText");
+const loveBtnContainer = document.getElementById("loveBtnContainer");
+
+const loveMessages = [
+    "يا شيخة؟! 😱",
+    "فكرى تاني كدة! 🥺",
+    "مفيش خيار تاني أصلاً! 🙈",
+    "أنا زعلت خلاص! 💔",
+    "انتقلي لـ (أكيد) أحسنلك! 😂"
+];
+
+const getUniqueLoveMessage = createUniquePicker(loveMessages);
+
+loveNoBtn.onclick = function() {
+    loveYesScale += 0.35;
+    loveNoScale -= 0.15;
+    
+    if (loveNoScale < 0.2) loveNoScale = 0;
+    
+    loveYesBtn.style.transform = `scale(${loveYesScale})`;
+    loveNoBtn.style.transform = `scale(${loveNoScale})`;
+
+    const extraMargin = (loveYesScale - 1) * 25;
+    loveBtnContainer.style.marginTop = `${15 + extraMargin}px`;
+    loveBtnContainer.style.marginBottom = `${extraMargin}px`;
+    
+    loveText.innerText = getUniqueLoveMessage();
+};
+
+loveYesBtn.onclick = function() {
+    document.getElementById("loveQuestion").style.display = "none";
+    document.getElementById("question").style.display = "block";
+};
+
+// --- 5. مرحلة السؤال الرئيسي (الزرار الهارب والموسيقى) ---
+const noBtn = document.getElementById("no");
+const song = document.getElementById("song");
+const funnyText = document.getElementById("funnyText");
+
+const messages = [
+    "توت توت.. حاسبي يا بطل! 🙈",
+    "مش هتلحقي تضغطيه! 😜",
+    "جربي تاني كده؟ 🏃‍♂️",
+    "عيب عليكي، خلودي زعل! 🥺",
+    "مفيش خيار No أصلاً! 💖",
+    "الزرار ده زينة بس! 😂",
+    "رايحة فين؟ تعالي هنا! 🏃‍♀️"
+];
+
+const getUniqueMessage = createUniquePicker(messages);
+
+document.getElementById("date").min = new Date().toISOString().split("T")[0];
+
+function moveNo() {
+    noBtn.style.position = "fixed";
+
+    const btnWidth = noBtn.offsetWidth;
+    const btnHeight = noBtn.offsetHeight;
+    const margin = 25;
+
+    const maxX = window.innerWidth - btnWidth - margin;
+    const maxY = window.innerHeight - btnHeight - margin;
+
+    const x = Math.max(margin, Math.floor(Math.random() * maxX));
+    const y = Math.max(margin, Math.floor(Math.random() * maxY));
+
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
+
+    funnyText.innerText = getUniqueMessage();
+}
+
+noBtn.addEventListener("mouseover", moveNo);
+noBtn.addEventListener("touchstart", (e) => {
+    e.preventDefault();
+    moveNo();
+});
+
+document.getElementById("yes").onclick = function() {
+    document.getElementById("question").style.display = "none";
+    document.getElementById("dateBox").style.display = "block";
+};
+
+function toggleMusic() {
+    const musicText = document.getElementById("musicText");
+    if (song.paused) {
+        song.play();
+        musicText.innerText = "وقف الصوت ⏸️";
+    } else {
+        song.pause();
+        musicText.innerText = "اضغط عليا قبل متختار 🎵";
+    }
+}
+
+function done() {
+    const dateVal = document.getElementById("date").value;
+    const timeVal = document.getElementById("time").value;
+
+    if (!dateVal || !timeVal) {
+        alert("Please choose both date and time ❤️");
+        return;
+    }
+
+    document.getElementById("dateBox").style.display = "none";
+    document.getElementById("final").style.display = "block";
+
+    alert(`Date confirmed ❤️\n\nDate: ${dateVal}\nTime: ${timeVal}`);
+}
+</script>
+
+</body>
+</html>
